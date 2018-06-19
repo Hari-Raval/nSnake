@@ -124,14 +124,14 @@ void Player::draw(Window* win)
 {
 	// The body
 	for (unsigned int i = 1; i < (this->body.size()); i++)
-		win->printChar('o',
+		win->printChar('+',
 		               this->body[i].x,
 		               this->body[i].y,
 		               Globals::Theme::player_body);
 
 	// The head
 	win->printChar(((this->alive) ?
-	                '@' :
+	                '0' :
 	                'X'),
 	               this->body.front().x,
 	               this->body.front().y,
